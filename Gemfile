@@ -9,7 +9,6 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
   # gem 'guard-rspec', '1.2.1'
   # gem 'guard-spork', '1.2.0'
@@ -26,6 +25,7 @@ group :assets do
 end
 
 group :test do
+  gem 'sqlite3', '1.3.5'
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '4.1.0'
   gem 'cucumber-rails', '1.2.1', :require => false
@@ -35,6 +35,6 @@ group :test do
   # gem 'growl', '1.0.3'
 end
 
-group :production do
+group :production, :development do
   gem 'pg', '0.12.2'
 end
