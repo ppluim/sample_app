@@ -7,13 +7,13 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.1.0'
-gem 'pg', '0.14.0'
 gem 'haml'
 
 group :development do
   gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'annotate', '2.5.0'
 end
 
 group :development, :test do
@@ -25,6 +25,9 @@ group :development, :test do
   # gem 'letter_opener'
 end
 
+group :production do
+  gem 'pg', '0.14.0'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -44,4 +47,4 @@ group :test do
 end
 
 # gem 'glance_core',       path: '~/projects/glance/glance_core'
-gem 'glance_core',       git: 'git@git.nedforce.nl:glance_core.git'
+# gem 'glance_core',       git: 'git@git.nedforce.nl:glance_core.git'
