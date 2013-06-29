@@ -6,22 +6,29 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'jquery-rails', '2.0.2'
-gem 'pg', '0.12.2'
+gem 'jquery-rails', '2.1.0'
+gem 'pg', '0.14.0'
 gem 'haml'
+
+group :development do
+  gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
-  # gem 'guard-rspec', '1.2.1'
+  gem 'guard-rspec', '1.2.1'
   # gem 'guard-spork', '1.2.0'
   # gem 'childprocess', '0.3.6'
   # gem 'spork', '0.9.2'
+  # gem 'letter_opener'
 end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '3.2.5'
+  gem 'sass-rails',   '3.2.6'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
 end
@@ -35,3 +42,6 @@ group :test do
   # gem 'rb-fsevent', '0.9.1', :require => false
   # gem 'growl', '1.0.3'
 end
+
+# gem 'glance_core',       path: '~/projects/glance/glance_core'
+gem 'glance_core',       git: 'git@git.nedforce.nl:glance_core.git'

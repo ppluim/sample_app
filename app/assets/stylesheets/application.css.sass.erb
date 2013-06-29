@@ -5,7 +5,9 @@
 
 // Vendor Dependencies
 @import "bootstrap"
-// @import "glance_cms_common"
+@import "glance_core/mixins"
+@import "glance_core/buttons"
+<%= GlanceCore::Assets.application_sass_imports %>
 
 // Authored Dependencies
 @import "modules/variables"
@@ -13,6 +15,7 @@
 
 // Base styles
 // @import "components/reset"
+@import "base/base"
 // @import "components/elements"
 @import "base/typography"
 // @import "components/layout"
