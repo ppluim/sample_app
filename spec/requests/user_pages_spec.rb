@@ -32,6 +32,7 @@ describe "Usert pages" do
   describe "profile page" do
     # Code to make a user variable
     usert = let(:usert) { FactoryGirl.create(:usert) }
+
     before { visit usert_path(usert) }
 
     it { should have_selector('h1',    text: usert.name) }

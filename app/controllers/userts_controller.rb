@@ -16,11 +16,15 @@ class UsertsController < ApplicationController
     @usert = Usert.new(params[:usert])
 
     if @usert.save
-      redirect_to usert_path(:usert[:id])
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @usert
     else
       render 'new'
     end
 
   end
+
+  private
+
 
 end
