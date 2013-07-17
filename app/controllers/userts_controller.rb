@@ -13,8 +13,14 @@ class UsertsController < ApplicationController
   end
 
   def create
-    usert.create!
-    render usert_path(@usert)
+    @usert = Usert.new(params[:usert])
+
+    if @usert.save
+      redirect_to usert_path(:usert[:id])
+    else
+      render 'new'
+    end
+
   end
 
 end

@@ -1,11 +1,11 @@
-%header.navbar.navbar-fixed-top.navbar-inverse
-  .navbar-inner
-    .container
-      = link_to "sample app", root_path, class: 'logo', id: "logo"
-      %nav
-        %ul.nav.pull-right
-          %li= link_to "Home",    root_path
-          %li= link_to "About",   about_path
-          %li= link_to "Help",    help_path
-          %li= link_to "Contact", contact_path
-          %li= link_to "Sign in", signup_path
+.site-header
+  %header
+    .logo
+      = link_to 'Spielerei', root_path, id: "logo"
+    %nav.header-nav
+      %ul
+        %li= link_to 'Home',    root_path
+        %li= link_to 'About',   about_path
+        %li= link_to 'Help',    help_path
+        %li= link_to 'Contact', contact_path
+        %li= link_to 'Sign in', signup_path

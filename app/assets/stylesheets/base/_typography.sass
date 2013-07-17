@@ -6,17 +6,26 @@ h4,
 h5,
 h6
   line-height: 1
+  font-family: $headingsFontFamily
 
 h1,
 h2
   margin-bottom: 30px
   margin-bottom: 3rem
 
-h1
+  // Header
+.logo
   +fontsize(3,1)
-  letter-spacing: -2px
-  letter-spacing: -0.2rem
-  text-align: center
+  text-transform: uppercase
+  letter-spacing: -0.1rem
+  font-weight: bold
+
+  a
+    color: $brandColor
+
+    &:hover
+      text-decoration: none
+      color: lighten($brandColor,10%)
 
 h2
   +fontsize(1.7,1)

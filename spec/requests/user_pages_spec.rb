@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "UsertPages" do
+describe "Usert pages" do
 
   describe "signup page" do
     subject { page }
@@ -31,7 +31,7 @@ describe "UsertPages" do
 
   describe "profile page" do
     # Code to make a user variable
-    let(:usert) { FactoryGirl.create(:usert) }
+    usert = let(:usert) { FactoryGirl.create(:usert) }
     before { visit usert_path(usert) }
 
     it { should have_selector('h1',    text: usert.name) }

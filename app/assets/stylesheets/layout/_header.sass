@@ -1,0 +1,54 @@
+.site-header
+  position: relative
+  margin-bottom: $gridGutterWidth
+
+  // Funky Colors
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 100%
+    height: .5em
+    background-color: red
+    // Auto
+    background: stripes($treehouse-auto, to right)
+    // Hard
+    background: stripes($treehouse-hard, to right)
+
+  header
+    position: relative
+    text-align: justify
+    letter-spacing: 1px
+    height: 3em
+    padding: 2em 10%
+    background: $grayDarker
+    color: $white
+
+    &:after
+      content: ''
+      display: inline-block
+      width: 100%
+
+  .logo,
+  nav
+    display: inline-block
+
+.logo
+  height: 100%
+
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    height: 100%
+
+.header-nav
+  li
+    margin-left: 1rem
+
+  a
+    color: $white
+
+    &:hover
+      color: $white
