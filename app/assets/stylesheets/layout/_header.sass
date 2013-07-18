@@ -21,10 +21,9 @@
     text-align: justify
     letter-spacing: 1px
     height: 3em
-    padding: 2em 10%
+    padding: 1em 10%
     background: $grayDarker
     color: $white
-
     &:after
       content: ''
       display: inline-block
@@ -36,7 +35,6 @@
 
 .logo
   height: 100%
-
   &:before
     content: ''
     display: inline-block
@@ -44,11 +42,26 @@
     height: 100%
 
 .header-nav
-  li
-    margin-left: 1rem
+  vertical-align: middle
+  height: 100%
 
+  > ul
+    > li
+      margin-left: $gridGutterWidth
+      display: inline
   a
-    color: $white
-
+    color: $headerNavLinkColor
     &:hover
-      color: $white
+      color: $headerNavLinkColor
+
+  li.dropdown
+    display: inline-block
+
+  .caret
+    border-top-color: $headerNavLinkColor
+
+.dropdown-menu
+  a
+    color: $dropdownLinkColor
+
+

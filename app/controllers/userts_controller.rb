@@ -1,5 +1,4 @@
 class UsertsController < ApplicationController
-
   def index
 
   end
@@ -14,17 +13,12 @@ class UsertsController < ApplicationController
 
   def create
     @usert = Usert.new(params[:usert])
-
     if @usert.save
+      sign_in @usert
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @usert
     else
       render 'new'
     end
-
   end
-
-  private
-
-
 end

@@ -29,4 +29,14 @@ class Usert < ActiveRecord::Base
   # ===== Normalize email =====
 
   before_save { |usert| usert.email = email.downcase }
+
+  # ===== Remember Token =====
+
+  before_save :create_remember_token
+
+  private
+
+  def create_remember_token
+    self.remember_token = SecureRandom.urlsafe_base64
+  end
 end

@@ -26,24 +26,24 @@ describe "Usert pages" do
         expect { click_button submit }.to change(Usert, :count).by(1)
       end
 
-      # describe "after saving the user" do
-      #   before { click_button submit }
-      #   let(:usert) { Usert.find_by(email: 'user@example.com') }
+      describe "after saving the user" do
+        before { click_button submit }
+        let(:usert) { Usert.find_by(email: 'user@example.com') }
 
-      #   it { should have_title(usert.name) }
-      #   it { should have_selector('div.alert.alert-success', text: 'Welcome') }
-      # end
+        # it { should have_title(usert.name) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_link('Sign out') }
+      end
     end
-
   end
 
-  describe "profile page" do
-    # Code to make a user variable
-    usert = let(:usert) { FactoryGirl.create(:usert) }
+  # describe "profile page" do
+  #   # Code to make a user variable
+  #   usert = let(:usert) { FactoryGirl.create(:usert) }
 
-    before { visit usert_path(usert) }
+  #   before { visit usert_path(usert) }
 
-    it { should have_selector('h1',    text: usert.name) }
-    it { should have_selector('title', text: usert.name) }
-  end
+  #   it { should have_selector('h1',    text: usert.name) }
+  #   it { should have_selector('title', text: usert.name) }
+  # end
 end
